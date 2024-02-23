@@ -6,12 +6,19 @@
 }
 
 /* Body Styles */
+.contents
+{
+    background-color: white;
+    max-width: 600px;
+    margin: 45px auto;
+    padding: 30px;
+    box-shadow: 0px 30px 50px rgba(65,50,100,0.08);
+    border-radius: 16px;
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
     padding: 20px;
-    background-image: url(images/clean.jpg);
-    background-repeat: no-repeat;
 }
 form p span {
     color: red;
@@ -25,7 +32,7 @@ form p{
     margin-bottom: 5px;
 }
 .head{
-    margin-top: 100px;
+    margin-top: 70px;
     margin-left: 50px;
 }
 button{
@@ -42,7 +49,9 @@ button:hover
 img {
     border: 1px solid #dddddd86;
     border-radius: 4px;
-    height: 700px;
+    max-width: 100%;
+    height: 620px;
+    opacity: 0.5;
   }
   
   img:hover {
