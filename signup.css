@@ -8,9 +8,9 @@
 /* Body Styles */
 
 body {
-    font-family: Arial, sans-serif;
     background-color: #ffffff;
     padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 form p span {
     color: red;
@@ -41,10 +41,10 @@ button:hover
 img {
     border: 2px solid #ffffff;
     border-radius: 4px;
-    margin-top: 45px;
+    margin-top: 90px;
     margin-left: 25px;
-    width:500px;
-    height: 500px;
+    width:400px;
+    height: 400px;
   }
   
   img:hover {
