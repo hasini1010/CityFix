@@ -17,7 +17,7 @@ body {
     place-content: center;
     text-align: center;
     background: linear-gradient(135deg, var(--primary), var(--secondary)),
-        url(selectuser.png)no-repeat center center / cover;
+        url(images/selectuser.png)no-repeat center center / cover;
 
 }
 
