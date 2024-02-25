@@ -37,15 +37,14 @@ button:hover
 {
     cursor: pointer;
 }
- img { 
-     border: 2px solid #ffffff; 
-     border-radius: 4px; 
-    margin-top: 90px; 
-     margin-left: 25px; 
-     width:400px; 
-    height: 400px; 
-   } 
-  
-   img:hover { 
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5); 
+  body{
+    /* The image used */
+    background-image: url("images/signup.png");
+    /* Full height */
+    height: 100%; 
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
