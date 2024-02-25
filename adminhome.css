@@ -30,16 +30,6 @@ nav{
 .sidebar ul li a:hover::after{
     width: 100%;
 }
-.map {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 600px;
-    margin: 75px auto;
-    padding: 10px;
-    box-shadow: 0px 30px 50px rgba(65,50,100,0.08);
-    border-radius: 16px;
-}
 /* numbers */
 #services{
     padding:30px 0; 
