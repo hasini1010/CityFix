@@ -45,13 +45,13 @@ nav{
 
 #row1 {
     display: inline-flex;
-    margin-left: 2px;
+    margin-left: 95px;
 }
 #row2
 {
     display: inline-flex;
     margin-top: 10px;
-    margin-left: 2px;
+    margin-left: 95px;
 }
 .col {
     margin-top: 15px;
@@ -276,5 +276,5 @@ nav{
     border-radius: 10px;
     text-align: center;
     margin-left: 30px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
