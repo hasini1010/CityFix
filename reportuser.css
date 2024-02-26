@@ -36,6 +36,7 @@ nav{
     margin-left: 20px;
     margin-top: 10px;
 }
+
 /* image */
 .hero
 {
@@ -155,60 +156,6 @@ nav{
     }
   }
 /* footer */
-.contact-left{
-    flex-basis: 35%;
-    }
-    .contact-right{
-        flex-basis: 60%;
-     }
-    .contact-left p{
-    margin: top 30px;
-    }
-    .contact-left p i{
-    color:#00827f;
-    margin-right: 15px;
-    font-size:25px;
-    }
-    .social-icons a{
-    text-decoration:none;
-    font-size:25px;
-    margin-top: 10px;
-    margin-right:15px;
-    color:#ffffff;
-    display:inline-block;
-    transition:transform 0.5s;
-    }
-    .social-icons a:hover{
-        color:#00827f;
-        transform:translateY(-5px);
-    }
-    .btn.btn2
-    {
-    margin-top: 10px;
-    display: inline-block;
-    background:#00827f;
-    }
-    .contact-right form
-    {
-    width: 100%;
-    }
-    form input,form textarea{
-        width:100%;
-        border:0;
-        outline:none;
-        background-color: #ffffff;
-        padding: 15px;
-        margin: 15px 0;
-        color: #000000;
-        font-size: 18px;
-        border-radius:6px;
-    }
-    form .btn2{
-    padding: 14px 60px;
-    font-size: 18px;
-    margin-top: 20px;
-    cursor:pointer;
-    }
     .copyright{
         width: 100%;
         text-align: center;
@@ -221,3 +168,13 @@ nav{
         color:#91ddf2;
     }
   
+#btn
+{
+    background-color: #00827f;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 20px;
+    margin-top: 15px;
+}
