@@ -36,3 +36,121 @@ nav{
     margin-left: 20px;
     margin-top: 10px;
 }
+/* image */
+.hero
+{
+    margin-top: 170px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+#drop-area
+{
+    width: 500px;
+    height: 400px;
+    padding:30px;
+    background:#fff;
+    text-align: center;
+    border-radius:20px;
+}
+#img-view
+{
+    width: 100%;
+    height:100%;
+    border-radius: 20px;
+    border:2px dashed #bbb5ff;
+    background:#ecf4f3;;
+    background-position: center;
+    background-size: cover;
+}  
+#img-view img{
+    width:100px;
+    margin-top: 25px;
+}
+#img-view span{
+    display: block;
+    font-size: 12px;
+    color: #777;
+    margin-top:15px;
+}
+/* user details */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --primary-color: #cedbda;
+    --secondary-color: #00827f;
+  }
+  
+  #animation{
+    min-height: 20vh;
+    position: relative;
+    width: 100%;
+    display: flex;
+    background-color: var(--complimentary-color);
+    justify-content: center;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   position: relative;
+  }
+  
+  h1 {
+    font-size: 50px;
+    color: var(--primary-color);
+    transform: translateY(-600px);
+    animation: 1.2s slideIn ease-in-out forwards 1s;
+    z-index: 10;
+    opacity: 0;
+    position: relative;
+  }
+  
+  h1::before {
+      content: '';
+      width: 0%;
+      height: 76px;
+      background-color: var(--secondary-color);
+      position: absolute;
+      bottom: -10px;
+      animation: 1s underline ease-in-out forwards 2s;
+      mix-blend-mode: screen;
+  }
+  
+  .overlay {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      opacity: 0;
+      left: 0;
+      right: 0;
+      background-color: var(--secondary-color);
+      transform: scale(.5);
+      animation: .5s slideIn ease-in-out forwards, 1s skewBg ease-in-out;
+  }
+  
+  @keyframes skewBg {
+    0% {
+      transform: scale(.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes underline {
+    100% {
+      width: 100%;
+    }
+  }
+  
+  @keyframes slideIn {
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }

@@ -9,7 +9,7 @@
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="reportuser.css">
-    <title>AdminHome</title>
+    <title>reportuser</title>
 </head>-
 <body style="background: #1CD8D2;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #93EDC7, #1CD8D2);  /* Chrome 10-25, Safari 5.1-6 */
@@ -33,5 +33,55 @@ background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, F
             </div>
         </div>
     </nav>
-    <!-- category -->
-    
+    <!-- image-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6" style="margin-top: 100px;">
+             <form action="">
+                <p style="font-size:22px; font-weight:bold; margin-left: 40px; color:#00827f">Problem Title</p>
+                <input type="text" style="border-radius: 4px; border:none; height: 40px; width: 500px; margin-left: 40px; background-color: #d4dcdb;" placeholder="Please enter the title of the problem"><br><br>
+                <p style="font-size:20px; font-weight:bold; margin-left: 40px; color:#00827f">Problem Description</p>
+                <textarea style="border-radius: 4px; border:none; height: 120px; width: 500px; margin-left: 40px; background-color: #d4dcdb;" placeholder="Explain the issue you're facing"></textarea>
+                <p style="font-size:20px; font-weight:bold; margin-left: 40px; color:#00827f">Location<p style="font-size: 10px; font-weight:light;  margin-left: 40px"><i>H.No,Street,Landmark,City,Postal Code,State,Country</i></p></p>
+                <textarea style="border-radius: 4px; border:none; height: 120px; width: 500px; margin-left: 40px; background-color: #d4dcdb;" placeholder="Enter your location:"></textarea>
+            </form>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6">
+                <div class="hero">
+                    <label for="input-file" id="drop-area">
+                        <input type="file" accept="image/*" id="input-file" hidden>
+                        <div id="img-view">
+                            <img src="images/camera.jpg" alt="camera" style="width: 200px;">
+                            <p style="cursor: pointer;">Drag and drop or click here <br>to upload image</p>
+                            <span style="cursor: pointer;">Upload any images from the desktop</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- user -->
+    <div class = 'container-fluid' id="animation">
+        <h1>Enter Your Details</h1>
+     <div class="overlay"></div>
+     </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6">
+                <img src="images/newgif.gif" alt="responsive webite" class="img-fluid" style="box-shadow: 0 5px 10px rgb(57, 181, 186); border-radius: 50%; margin-left:100px; margin-top: 50px; height: 400px; width: 400px;">
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6" style="margin-top: 100px;">
+             <form action="">
+                <p style="font-size:22px; font-weight:bold; margin-left: 40px; color:#00827f">Name</p>
+                <input type="text" style="border-radius: 4px; border:none; height: 40px; width: 500px; margin-left: 40px; background-color: #d4dcdb;" placeholder="Enter your name:"><br><br>
+                <p style="font-size:22px; font-weight:bold; margin-left: 40px; color:#00827f">Phone No:</p>
+                <input type="text" style="border-radius: 4px; border:none; height: 40px; width: 500px; margin-left: 40px; background-color: #d4dcdb;" placeholder="Enter your phone number:"><br><br>
+                <p style="font-size:22px; font-weight:bold; margin-left: 40px; color:#00827f">Email:</p>
+                <input type="email" style="border-radius: 4px; border:none; height: 40px; width: 500px; margin-left: 40px; background-color: #d4dcdb;" placeholder="Enter your email-id:"><br><br>
+            </form>
+            </div>
+        </div>
+    </div>
+    <script src="reportuser.js"></script>
+    </body>
+    </html>
