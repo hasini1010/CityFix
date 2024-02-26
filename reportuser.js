@@ -13,3 +13,16 @@ function uploadImage()
     imageView.style.border=0;
 
 }
+        function toggleCheckbox(selectedCard) {
+            var cards = document.querySelectorAll('.card');
+            cards.forEach(function (card) {
+                if (card !== selectedCard) {
+                    card.classList.remove('selected');
+                    card.querySelector('.checkmark').style.display = 'none';
+                }
+            });
+    
+            selectedCard.classList.toggle('selected');
+            var checkmark = selectedCard.querySelector('.checkmark');
+            checkmark.style.display = selectedCard.classList.contains('selected') ? 'block' : 'none';
+        }
