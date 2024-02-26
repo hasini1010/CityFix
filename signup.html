@@ -9,37 +9,53 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
+    <script src="js/validation.js" defer></script>
     <title>Sign-Up</title>
 </head>
 
-<body>
-    <div class="container-fluid" style="border:10px solid black; height: 800px;">
+<body  style="background:url(images/signup1.png);height: 100%; background-position: center;
+background-repeat: no-repeat;background-size: cover;">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-6">
-             
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-6">
+            
+            <div class="col-xl-6 col-lg-6 col-md-6" style="margin: 70px; width: 40%; height: 500px;margin-top:10%;margin-left: 200px;">
                 <div class="head">
-                    <h1 style="color: antiquewhite;">Create your Account</h1>
-                    <p style="margin-left: 10px; font-size: small;">Let's get started!</p>
+                    <h1 style="color: black;"><b>Create your Account</b></h1>
+                    <p>Let's get started!</p>
                 </div>
-                <form>
-                    <p style="font-size: small; font-weight: 400;">Name<span>*</span></p>
-                    <input type="text" style="border-radius: 4px; border:none;">
-                    <p style="font-size: small; font-weight: 400;">Email<span>*</span></p>
-                    <input type="text" style="border-radius: 4px; border:none;">
-                    <p style="font-size: small; font-weight: 400;">Password<span>*</span></p>
-                    <input type="password" style="border-radius: 4px; border:none;">
-                    <p style="font-size: small; font-weight: 400;">Repeat Password<span>*</span></p>
-                    <input type="password" style="border-radius: 4px; border:none;">
-                    <br><br>
-                    <label class="terms" style="font-size: small; opacity:0.2;"><input type="checkbox" class="tick"> I
-                        agreen to all Terms and Privacy policies</label>
+                <form action="processsignup.php" method="post" id="signup" novalidate>
+                    
+            
+                    <div>
+                        <input type="text" class="form-control form-contro-lg bg-light fs-6"
+                            style="border-radius: 50px;margin-top: 10px; width: 300px;margin-bottom:20px;" placeholder="Name"id="name" name="name">
+                    </div>
+                    
+                
+                    <div  >
+                        <input type="text" class="form-control form-contro-lg bg-light fs-6"
+                            style="border-radius: 50px;margin-top: 10px; width: 300px;margin-bottom:20px;" placeholder="Email"  id="email" name="email">
+                    </div>
+                    <div>
+                        <input type="password" class="form-control form-contro-lg bg-light fs-6"
+                            style="border-radius: 50px;margin-top: 10px; width: 300px;margin-bottom:20px;" placeholder="Password" id="password" name="password">
+                    </div>
+                    <div  >
+                        <input type="password" class="form-control form-contro-lg bg-light fs-6"
+                            style="border-radius: 50px;margin-top: 10px; width: 300px;margin-bottom:20px;" placeholder="Repeat Password" id="password_confirmation" name="password_confirmation">
+                    </div>
                     <br>
-                    <button style="border-radius: 15px; margin-top: 5px;">Sign Up</button>
-                    <br>
-                    <p style="font-size: smaller; float: left;"> Already have an account?
-                        <p style="color:black; font-weight: 600 ; font-size: smaller; float: left;"><a href="#"
+                    <label class="terms" style="font-size: small; opacity:0.6;"><input type="checkbox" class="tick"> I
+                        agree to all Terms and Privacy policies</label>
+                    <div class="input-group mb-3" style="text-align: center;">
+                        <button class="btn btn-lg"
+                            style="width: 100px; margin-top: 10px; height: 50px; border-radius: 50px; cursor: pointer;background-color:#00827f;color: white;">
+                            <b>Signup</b>
+                        </button>
+                    </div>
+                    <p style="font-size: medium; float: left;"> Already have an account?
+                        <p style="color:black; font-weight: 750 ; font-size: medium; float: left;"><a href="http://localhost/CityFix/login.php"
                             style="text-decoration: none; color: rgb(0, 0, 0);">Log in</a></p>
                     </p>
                 </form>
