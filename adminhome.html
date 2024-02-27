@@ -15,6 +15,18 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title>AdminHome</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<!-- map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <style>
+        #map
+        {
+            width: 400px;
+            height: 400px;
+        }
+    </style>
 </head>
 
 <body
@@ -41,6 +53,8 @@ background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, F
             </div>
         </div>
     </nav>
+    <!-- map -->
+    <div id="map"></div>
     <!-- Profile-->
     <div class="modal" id="profile">
         <div class="modal-dialog">
@@ -60,27 +74,19 @@ background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, F
                     <input type="password"
                         style="border-radius: 4px; border:none; height: 40px; width: 400px; background-color: #f6f8f8;"><br><br>
                     <button type="submit" class="btn btn2"
-                        style="color: #fff; font-size: 12px; font-weight: bold;">Submit</button>
+                        style="color:rgb(87, 163, 165); font-size: 12px; font-weight: bold;">Submit</button>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" onclick="logout()" class="btn btn2" style="color: #fff; font-size: 14px; font-weight: bold;"><i
+                    <button type="submit" onclick="logout()" class="btn btn2" style="color: #ffffff; font-size: 14px; font-weight: bold;"><i
                             class="fa-solid fa-rotate-left"></i> Log Out</button>
                 </div>
             </div>
         </div>
     </div>
     <!--map-->
-    <div class="container-fluid" style="margin-top:100px ;width: 100%;background: #1CD8D2;  /* fallback for old browsers */
+    <div class="container-fluid" style="margin-top:100px ;width: 100%;background: #ffffff;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #93EDC7, #1CD8D2);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;height: 550px;">
-        <div class="row" style=" margin-left: 320px;">
-            <div class="col" class="map" style="margin-top: 50px;">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15224.687890115441!2d78.6909153!3d17.45148115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1708850918585!5m2!1sen!2sin"
-                    width="800px" height="450" style="border: 5px solid #00827f ;border-radius: 10px;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade "></iframe>
-            </div>
-        </div>
     </div>
     <!-- numbers -->
     <div id="services">
@@ -142,6 +148,146 @@ background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, F
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-</body>
+        <!-- maps -->
+        <script>
+            var map = L.map('map').setView([17.4478,78.6772], 10);
+    
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
 
+            // in-progress
+            const data={
+             ghatkesar:
+             {
+                coords:[17.4534,78.6865],
+                title:"Ghatkesar",
+                address:`<b style="font-size:15px; color:#00827f;">Water</b><br>
+                <b>12</b><br>
+                <h6 style="color:#206497">In Progress</h6>`,
+             },
+             uppal:{
+                coords:[17.4023,78.5601],
+                title:"Uppal",
+                address:`<b style="font-size:15px; color:#00827f;">Roads</b><br>
+                <b>28</b><br>
+                <h6 style="color:#206497">In Progress</h6>`,
+             },
+             keesara:{
+                coords:[17.5236,78.6674],
+                title:"Keesara",
+                address:`<b style="font-size:15px; color:#00827f;">Animals</b><br>
+                <b>19</b><br>
+                <h6 style="color:#206497">In Progress</h6>`,
+             }
+           }
+
+  const customIcon= L.icon(
+                {
+                    iconUrl: 'images/inprogress.png',
+                    iconSize:[50,50],
+                }
+            )
+         for(let key in data)
+         {
+           const airport=data[key];
+           L.marker(airport.coords,{
+            title:airport.title,
+            icon:customIcon,
+           })
+           .bindPopup(`<span class="popup">
+           ${airport.address}
+            </span>`)
+           .addTo(map)
+        }
+        // solved
+          const data2={
+            bibinagar:
+            {
+               coords:[17.4726,78.7988],
+               title:"Bibinagar",
+               address:`<b style="font-size:15px; color:#00827f;">Street Lights</b><br>
+               <b>23</b><br>
+               <h6 style="color:#206497">Solved</h6>`,
+            },
+            bhongir:{
+               coords:[17.5164,78.8894],
+               title:"Bhongir",
+               address:`<b style="font-size:15px; color:#00827f;">Garbage</b><br>
+               <b>26</b><br>
+               <h6 style="color:#206497">Solved</h6>`,
+            },
+            yaadgirigutta:{
+               coords:[17.5806,78.9491],
+               title:"Yaadagirigutta",
+               address:`<b style="font-size:15px; color:#00827f;">Public Facilities</b><br>
+               <b>29</b><br>
+               <h6 style="color:#206497">Solved</h6>`,
+            }
+          }
+
+ const customIcon2= L.icon(
+               {
+                   iconUrl: 'images/solved.png',
+                   iconSize:[50,50],
+               }
+           )
+        for(let key in data2)
+        {
+          const airport=data2[key];
+          L.marker(airport.coords,{
+           title:airport.title,
+           icon:customIcon2,
+          })
+          .bindPopup(`<span class="popup">
+          ${airport.address}
+           </span>`)
+          .addTo(map)
+       }
+       //problems
+       const data3={
+            choutuppal:
+            {
+               coords:[17.2397,78.9079],
+               title:"Choutuppal",
+               address:`<b style="font-size:15px; color:#00827f;">Others</b><br>
+               <b>23</b><br>
+               <h6 style="color:#206497">Submitted</h6>`,
+            },
+            bhoodanpochampally:{
+               coords:[17.3459,78.8297],
+               title:"Bhoodan Pochampally",
+               address:`<b style="font-size:15px; color:#00827f;">Drainage</b><br>
+               <b>26</b><br>
+               <h6 style="color:#206497">Submitted</h6>`,
+            },
+            jagdevpur:{
+               coords:[17.7590,78.7926],
+               title:"Jagdevpur",
+               address:`<b style="font-size:15px; color:#00827f;">Public Facilities</b><br>
+               <b>29</b><br>
+               <h6 style="color:#206497">Submitted</h6>`,
+            }
+          }
+
+ const customIcon3= L.icon(
+               {
+                   iconUrl: 'images/problems.png',
+                   iconSize:[50,50],
+               }
+           )
+        for(let key in data3)
+        {
+          const airport=data3[key];
+          L.marker(airport.coords,{
+           title:airport.title,
+           icon:customIcon3,
+          })
+          .bindPopup(`<span class="popup">
+          ${airport.address}
+           </span>`)
+          .addTo(map)
+       }
+       </script>
+ </body>
 </html>
