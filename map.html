@@ -265,6 +265,37 @@ background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, F
            </span>`)
           .addTo(map)
        }
+        //database
+        const data4={
+            location1:
+            {
+               coords:[latitude,longitude],
+               title:location,
+               address:`<b style="font-size:15px; color:#00827f;">Others</b><br>
+               <b>23</b><br>
+               <h6 style="color:#206497">Submitted</h6>`,
+            }
+          }
+
+ const customIcon4= L.icon(
+               {
+                   iconUrl: 'images/problems.png',
+                   iconSize:[50,50],
+               }
+           )
+        for(let key in data4)
+        {
+          const airport=data4[key];
+          L.marker(airport.coords,{
+           title:airport.title,
+           icon:customIcon3,
+          })
+          .bindPopup(`<span class="popup">
+          ${airport.address}
+           </span>`)
+          .addTo(map)
+       }
+       </script>
        </script>
  </body>
 </html>

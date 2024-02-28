@@ -34,11 +34,17 @@
         crossorigin="anonymous"></script>
 <!-- preloader -->
 <script>
-var loader=document.getElementById("preloader");
-window.addEventListener("load",function()
-{
-    loader.style.display="none";
-})
-</script>
+    var loader = document.getElementById("preloader");
+    
+    // Function to hide the preloader and show the application content
+    function showApplication() {
+        loader.style.display = "none";
+        // Add code to show your application content here
+    }
+    
+    // Wait for 10 seconds before showing the application content
+    setTimeout(showApplication, 5000); // 10000 milliseconds = 10 seconds
+    </script>
+    
     </body>
 </html>

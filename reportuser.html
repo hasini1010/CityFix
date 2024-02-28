@@ -12,7 +12,11 @@
     <link rel="stylesheet" href="reportuser.css">
     
     <title>reportuser</title>
-</head>-
+    <style>
+        /* Style for the custom pop-up */
+  
+</style>
+</head>
 
 <body
     style="background: #1CD8D2;  /* fallback for old browsers */
@@ -170,6 +174,9 @@ background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, F
                         style="border-radius: 4px; border:none; height: 120px; width: 500px; margin-left: 70px; background-color: #f6f8f8;"
                         placeholder=" Enter your location:"></textarea>
                 </form>
+            <button type="submit" class="find-state" style="color: #fff; font-size: 14px; margin-left: 70px; margin-top: 20px;
+            font-weight: bold; border-color: #00827f; background-color: #00827f; border-radius: 10px; text-align: center; height: 30px; width: 200px;
+            "><i class="fa-solid fa-paper-plane"></i> Use my current location</button>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6">
                 <div class="hero">
@@ -213,7 +220,7 @@ background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, F
                         placeholder=" Enter your email-id:"><br><br>
                     <div class="container">
                         <div class="btn1" id="btn">
-                            <button type="submit" class="btn btn2"
+                            <button type="submit" class="btn btn2" onclick="display()"
                                 style="color: #fff; font-size: 14px; font-weight: bold;">SUBMIT</button>
                         </div>
                     </div>
@@ -221,6 +228,13 @@ background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, F
             </div>
         </div>
     </div>
+    <!--popup  -->
+<script>
+      function display()
+  {
+        alert("Problem submitted successfully✅");
+  }
+</script>
     <!-- footer -->
     <div class="footer" style="margin-top:80px;">
         <div class="copyright">
@@ -228,7 +242,6 @@ background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, F
         </div>
     </div>
     <script src="reportuser.js"></script>
-
 </body>
 
 </html>
