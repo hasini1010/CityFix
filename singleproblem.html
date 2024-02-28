@@ -118,11 +118,14 @@ background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, F
                 </form>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6">
-                <div>
-                    <p style="font-size:22px; font-weight:bold;color:#00827f">Image</p>
-                    <div class="hero"
-                        style="height:450px;width: 600px;background-color: #f6f8f8;border:2px solid black; margin-top:18px;">
-                        <img src="" alt="">
+                    <p style="font-size:22px; font-weight:bold;color:#00827f; margin-left:45px;">Image</p>
+                    <div class="hero">
+                        <p id="image-link" hidden></p>
+                        <label for="input-file" id="drop-area">
+                            <div id="img-view">
+                                <img id="image-display" src="" alt="Uploaded Image">
+                            </div>
+                        </label>
                     </div>
                 </div>
 
@@ -174,12 +177,15 @@ background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, F
         <p>Copyright©ARPDHK. Made with <i class="fa-solid fa-heart"></i> <b>@Team Coderella Squad</b></p>
     </div>
 </div>
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+        <script>
+            // Retrieve the image link from localStorage
+            var imageLink = localStorage.getItem('imageLink');
+    
+            // Set the src attribute of the image element
+            document.getElementById('image-display').src = imageLink;
+        </script>
 </body>
-
 </html>

@@ -12,6 +12,7 @@ function uploadImage()
     imageView.textContent="";
     imageView.style.border=0;
     imageLinkParagraph.textContent = "Image Link: " + imgLink;
+    localStorage.setItem('imageLink', imgLink);
 }
         function toggleCheckbox(selectedCard) {
             var cards = document.querySelectorAll('.card');
