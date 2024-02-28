@@ -74,7 +74,7 @@ background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, F
     </div>
     <!-- problem details -->
 
-    <div class="container-fluid" style=" margin-top:160px;height:1300px">
+    <div class="container-fluid" style=" margin-top:160px;height:auto">
 
         <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-6">
@@ -116,19 +116,7 @@ background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, F
 
 
                 </form>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-6">
-                    <p style="font-size:22px; font-weight:bold;color:#00827f; margin-left:45px;">Image</p>
-                    <div class="hero">
-                        <p id="image-link" hidden></p>
-                        <label for="input-file" id="drop-area">
-                            <div id="img-view">
-                                <img id="image-display" src="" alt="Uploaded Image">
-                            </div>
-                        </label>
-                    </div>
-
-                <div class="d-flex justify-content-center" style="margin-top: 30px;">
+                <div class="d-flex justify-content-center">
                     <div class="input-group mb-3" style="text-align: center;margin-left:80px;">
                         <button class="btn btn-lg accept-btn"
                             onclick="toggleDetailsForm()"
@@ -143,7 +131,7 @@ background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, F
                         </button>
                     </div>
                 </div>
-            </div>   
+              
                 <div id="details-form" style="display: none; text-align: center;">
                     <h2>Enter Worker Details</h2>
                     <form>
@@ -159,6 +147,20 @@ background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, F
                         <button class="btn btn-primary" type="submit">Submit</button>
                     </form>
                 </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 justify-content-center" >
+                    <p style="font-size:28px; font-weight:bold;color:#00827f;text-align: center;">Image</p>
+                    <div class="hero">
+                        <p id="image-link" hidden></p>
+                        <label for="input-file" id="drop-area">
+                            <div id="img-view">
+                                <img id="image-display" src="" alt="Uploaded Image">
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                 
+               
                 
                 <script>
                     const acceptButton = document.querySelector('.accept-btn');
