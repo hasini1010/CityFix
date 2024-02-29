@@ -1,19 +1,42 @@
-const dropArea=document.getElementById("drop-area");
-const inputFile=document.getElementById("input-file");
-const imageView=document.getElementById("img-view");
+const dropArea = document.getElementById("drop-area");
+const inputFile = document.getElementById("input-file");
+const imageView = document.getElementById("img-view");
 const imageLinkParagraph = document.getElementById("image-link");
-inputFile.addEventListener("change",uploadImage);
 
-function uploadImage()
-{
-    inputFile.files[0];
-    let imgLink=URL.createObjectURL( inputFile.files[0]);
-    imageView.style.backgroundImage=`url(${imgLink})`;
-    imageView.textContent="";
-    imageView.style.border=0;
-    imageLinkParagraph.textContent = "Image Link: " + imgLink;
-    localStorage.setItem('imageLink', imgLink);
+inputFile.addEventListener("change", uploadFile);
+
+function uploadFile() {
+    const file = inputFile.files[0];
+
+    if (file.type.startsWith('image/')) {
+        // If the uploaded file is an image
+        const imgLink = URL.createObjectURL(file);
+        imageView.style.backgroundImage = `url(${imgLink})`;
+        imageView.textContent = "";
+        imageView.style.border = 0;
+        imageLinkParagraph.textContent = "Image Link: " + imgLink;
+        localStorage.setItem('imageLink', imgLink);
+    } else if (file.type.startsWith('video/')) {
+        // If the uploaded file is a video
+        const video = document.createElement('video');
+        video.src = URL.createObjectURL(file);
+        video.controls = true;
+        video.style.width = '100%'; // Match the container width
+        video.style.height = '100%'; // Match the container height
+        video.style.borderRadius = '20px';
+        video.style.border = '2px dashed #bbb5ff';
+        video.style.background = '#ecf4f3';
+        video.style.backgroundPosition = 'center';
+        video.style.backgroundSize = 'cover';
+        video.style.margin = 'auto'; // Center horizontally
+        video.style.display = 'block'; // Ensure block-level element
+        imageView.innerHTML = '';
+        imageView.appendChild(video);
+        imageLinkParagraph.textContent = "Video Link: " + video.src;
+        localStorage.setItem('videoLink', video.src);
+    }
 }
+
         function toggleCheckbox(selectedCard) {
             var cards = document.querySelectorAll('.card');
             cards.forEach(function (card) {
