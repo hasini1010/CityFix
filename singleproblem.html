@@ -148,19 +148,17 @@ background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, F
                     </form>
                 </div>
             </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 justify-content-center">
-                <p id="video-link"></p>
-                <p style="font-size: 28px; font-weight: bold; color: #00827f; text-align: center;">Image/Video</p>
-                <div class="hero">
-                    <label for="input-file" id="drop-area">
-                        <div id="img-view">
-                            <!-- Initially, no source is provided, so neither image nor video is displayed -->
-                            <img id="image-display" src="" alt="Uploaded Image">
-                            <video id="video-display" src="" alt="Uploaded Video"></video>
-                        </div>
-                    </label>
+            <div class="col-xl-6 col-lg-6 col-md-6 justify-content-center" >
+                    <p style="font-size:28px; font-weight:bold;color:#00827f;text-align: center;">Image</p>
+                    <div class="hero">
+                        <p id="image-link" hidden></p>
+                        <label for="input-file" id="drop-area">
+                            <div id="img-view">
+                                <img id="image-display" src="" alt="Uploaded Image">
+                            </div>
+                        </label>
+                    </div>
                 </div>
-            </div>            
                 <script>
                     const acceptButton = document.querySelector('.accept-btn');
                     const detailsForm = document.getElementById('details-form');
@@ -183,31 +181,9 @@ background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, F
         <script>
             // Retrieve the image link from localStorage
             var imageLink = localStorage.getItem('imageLink');
-            var videoLink = localStorage.getItem('videoLink');
-        
-            // Get the image and video display elements
-            var imageDisplay = document.getElementById('image-display');
-            var videoDisplay = document.getElementById('video-display');
-        
-            // Check if there is a stored link for an image
-            if (imageLink) {
-                // Set the src attribute of the image element
-                imageDisplay.src = imageLink;
-                // Hide the video display element
-                videoDisplay.style.display = 'none';
-                // Show the image display element
-                imageDisplay.style.display = 'block';
-            } else if (videoLink) {
-                // Check if there is a stored link for a video
-                // Set the src attribute of the video element to display the video
-                videoDisplay.src = videoLink;
-                // Hide the image display element
-                imageDisplay.style.display = 'none';
-                // Show the video display element
-                videoDisplay.style.display = 'block';
-            }
+    
+            // Set the src attribute of the image element
+            document.getElementById('image-display').src = imageLink;
         </script>
-        
-        
 </body>
 </html>
