@@ -8,11 +8,10 @@ function uploadImage()
 {
     inputFile.files[0];
     let imgLink=URL.createObjectURL( inputFile.files[0]);
-    imageView.style.backgroundImage=`url(${imgLink})`;
+    imageView.style.backgroundImage=url(`${imgLink}`);
     imageView.textContent="";
     imageView.style.border=0;
     imageLinkParagraph.textContent = "Image Link: " + imgLink;
-    localStorage.setItem('imageLink', imgLink);
 }
         function toggleCheckbox(selectedCard) {
             var cards = document.querySelectorAll('.card');
@@ -54,3 +53,7 @@ function uploadImage()
         localStorage.setItem('LAT',latitude);
         localStorage.setItem('LON',longitude);
         localStorage.setItem('LOC',place);
+
+
+    
+ 

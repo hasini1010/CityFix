@@ -160,7 +160,7 @@ background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, F
         <!-- maps -->
         
         <script>
-            var map = L.map('map').setView([17.4534,78.6865], 10);
+            var map = L.map('map').setView([17.3541,78.4781], 10);
     
             L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -168,33 +168,21 @@ background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, F
 
             // in-progress
             const data={
-             ghatkesar:
+            CMR:
              {
-                coords:[17.4534,78.6865],
-                title:"Ghatkesar",
-                address:`<b style="font-size:15px; color:#00827f;">Water</b><br>
-                <b>12</b><br>
-                <h6 style="color:#206497">In Progress</h6>`,
+                coords:[17.60368,78.486258],
+                title:"CMR college of engineering and technology",
+                address:`<b style="font-size:15px; color:#00827f;">User-Name:Prasanna</b><br>
+                <b>ProblemID: 12</b><br>
+                <h6 style="color:#206497">Category:Water</h6>
+                <h6 style="color:#206497">Problem Title:</h6>`
+                ,
              },
-             uppal:{
-                coords:[17.4023,78.5601],
-                title:"Uppal",
-                address:`<b style="font-size:15px; color:#00827f;">Roads</b><br>
-                <b>28</b><br>
-                <h6 style="color:#206497">In Progress</h6>`,
-             },
-             keesara:{
-                coords:[17.5236,78.6674],
-                title:"Keesara",
-                address:`<b style="font-size:15px; color:#00827f;">Animals</b><br>
-                <b>19</b><br>
-                <h6 style="color:#206497">In Progress</h6>`,
-             }
            }
 
   const customIcon= L.icon(
                 {
-                    iconUrl: 'images/inprogress.png',
+                    iconUrl: 'images/problems.png',
                     iconSize:[50,50],
                 }
             )
@@ -210,94 +198,6 @@ background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, F
             </span>`)
            .addTo(map)
         }
-        // solved
-          const data2={
-            bibinagar:
-            {
-               coords:[17.4726,78.7988],
-               title:"Bibinagar",
-               address:`<b style="font-size:15px; color:#00827f;">Street Lights</b><br>
-               <b>23</b><br>
-               <h6 style="color:#206497">Solved</h6>`,
-            },
-            bhongir:{
-               coords:[17.5164,78.8894],
-               title:"Bhongir",
-               address:`<b style="font-size:15px; color:#00827f;">Garbage</b><br>
-               <b>26</b><br>
-               <h6 style="color:#206497">Solved</h6>`,
-            },
-            yaadgirigutta:{
-               coords:[17.5806,78.9491],
-               title:"Yaadagirigutta",
-               address:`<b style="font-size:15px; color:#00827f;">Public Facilities</b><br>
-               <b>29</b><br>
-               <h6 style="color:#206497">Solved</h6>`,
-            }
-          }
-
- const customIcon2= L.icon(
-               {
-                   iconUrl: 'images/solved.png',
-                   iconSize:[50,50],
-               }
-           )
-        for(let key in data2)
-        {
-          const airport=data2[key];
-          L.marker(airport.coords,{
-           title:airport.title,
-           icon:customIcon2,
-          })
-          .bindPopup(`<span class="popup">
-          ${airport.address}
-           </span>`)
-          .addTo(map)
-       }
-       //problems
-       const data3={
-            choutuppal:
-            {
-               coords:[17.2397,78.9079],
-               title:"Choutuppal",
-               address:`<b style="font-size:15px; color:#00827f;">Others</b><br>
-               <b>23</b><br>
-               <h6 style="color:#206497">Submitted</h6>`,
-            },
-            bhoodanpochampally:{
-               coords:[17.3459,78.8297],
-               title:"Bhoodan Pochampally",
-               address:`<b style="font-size:15px; color:#00827f;">Drainage</b><br>
-               <b>26</b><br>
-               <h6 style="color:#206497">Submitted</h6>`,
-            },
-            jagdevpur:{
-               coords:[17.7590,78.7926],
-               title:"Jagdevpur",
-               address:`<b style="font-size:15px; color:#00827f;">Public Facilities</b><br>
-               <b>29</b><br>
-               <h6 style="color:#206497">Submitted</h6>`,
-            }
-          }
-
- const customIcon3= L.icon(
-               {
-                   iconUrl: 'images/problems.png',
-                   iconSize:[50,50],
-               }
-           )
-        for(let key in data3)
-        {
-          const airport=data3[key];
-          L.marker(airport.coords,{
-           title:airport.title,
-           icon:customIcon3,
-          })
-          .bindPopup(`<span class="popup">
-          ${airport.address}
-           </span>`)
-          .addTo(map)
-       }
        </script>
  </body>
 </html>
