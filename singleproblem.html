@@ -113,7 +113,11 @@ background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, F
                     <p style="font-size:20px; font-weight:bold; margin-left:70px; color:#00827f">Email:</p>
                     <input type="text"
                         style="border-radius: 4px; border:none; height: 40px; width: 500px; margin-left: 70px; background-color: #f6f8f8;"><br><br>
-
+                    
+                        <p style="font-size:20px; font-weight:bold; margin-left:70px; color:#00827f">Date:</p>
+                        <input type="date" id="datePicker"
+                        style="border-radius: 4px; border:none; height: 40px; width: 500px; margin-left: 70px; background-color: #f6f8f8;"><br><br>
+                    
 
                 </form>
                 <div class="d-flex justify-content-center">
@@ -124,28 +128,12 @@ background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, F
                             <b>Accept</b>
                         </button>
                     </div>
-                    <div class="input-group mb-3" style="text-align: center;">
+                    <!-- <div class="input-group mb-3" style="text-align: center;">
                         <button class="btn btn-lg reject-btn"
                             style="width: 140px; margin-top: 30px; height: 50px; border-radius: 50px; cursor: pointer;background-color: rgb(244, 70, 70);  color: white;">
                             <b>Reject</b>
                         </button>
-                    </div>
-                </div>
-              
-                <div id="details-form" style="display: none; text-align: center;">
-                    <h2>Enter Worker Details</h2>
-                    <form>
-                        <label for="workerName">Name:</label>
-                        <input type="text" id="workerName" name="workerName" style="margin-bottom: 10px;" required>
-                        <br>
-                        <label for="phone">Phone No:</label>
-                        <input type="text" id="phone" name="phone" style="margin-bottom: 10px;" required>
-                        <br>
-                        <label for="datePicker">Date:</label>
-                        <input type="date" id="datePicker" name="selectedDate" style="margin-bottom: 20px;" required>
-                        <br>
-                        <button class="btn btn-primary" type="submit">Submit</button>
-                    </form>
+                    </div> -->
                 </div>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 justify-content-center" >
@@ -158,6 +146,29 @@ background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, F
                             </div>
                         </label>
                     </div>
+                    <div class="hero">
+                        <p id="image-link" hidden></p>
+                        <label for="input-file" id="drop-area">
+                            <div id="img-view">
+                                <img id="image-display" src="" alt="Uploaded Image">
+                            </div>
+                        </label>
+                    </div>
+                    <!-- <div id="details-form" style="display: none; text-align: center;">
+                        <h2>Enter Worker Details</h2>
+                        <form>
+                            <label for="workerName">Name:</label>
+                            <input type="text" id="workerName" name="workerName" style="margin-bottom: 10px;" required>
+                            <br>
+                            <label for="phone">Phone No:</label>
+                            <input type="text" id="phone" name="phone" style="margin-bottom: 10px;" required>
+                            <br>
+                            <label for="datePicker">Date:</label>
+                            <input type="date" id="datePicker" name="selectedDate" style="margin-bottom: 20px;" required>
+                            <br>
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                        </form>
+                    </div> -->
                 </div>
                 <script>
                     const acceptButton = document.querySelector('.accept-btn');
